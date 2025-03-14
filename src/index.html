@@ -1,0 +1,539 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <title>Food POS</title>
+</head>
+
+<body class="font-roboto bg-stone-100">
+  <div class="container h-screen w-screen flex relative">
+    <!-- sidebar -->
+    <aside
+      class="bg-black h-full w-60 rounded-r-3xl flex flex-col hover:bg-slate-800 from-slate-800 to-slate-700 transition-all duration-700 delay-300 z-10">
+
+      <div class="w-full  flex items-center justify-center h-20">
+        <p class="text-white text-2xl">FOOD POS</p>
+      </div>
+
+      <div class="w-full flex items-center justify-center">
+        <img class="w-28 h-28 object-cover rounded-full border-2 border-white"
+          src="img/336265442_756338909343792_6857489562699698271_n.jpg" alt="">
+      </div>
+
+      <div class="flex flex-col items-center justify-center mt-8 gap-2">
+        <p class="text-white">Hello Thanthita</p>
+        <span class="text-orange-500 flex items-center justify-center">It's 2 hours untill to lunch !!</span>
+      </div>
+
+      <section>
+
+        <div class="text-white flex flex-col items-center justify-between mt-8 gap-y-6 px-4">
+
+          <button class=" w-full  py-3 rounded-lg hover:bg-white hover:text-black"><i
+              class="fa-solid fa-mug-saucer mr-2"></i>Dashboard</button>
+          <button class=" w-full py-3 rounded-lg hover:bg-white hover:text-black"><i
+              class="fa-solid fa-list mr-2"></i>Order</button>
+          <button class=" w-full py-3 rounded-lg hover:bg-white hover:text-black"><i
+              class="fa-solid fa-circle-info mr-2"></i></i>Derail</button>
+          <button class=" w-full py-3 rounded-lg hover:bg-white hover:text-black"><i
+              class="fa-brands fa-cc-visa mr-2"></i>Finace</button>
+          <button class=" w-full py-3 rounded-lg mt-40 bg-orange-500 hover:text-black"><i
+              class="fa-solid fa-right-from-bracket mr-2 "></i>Log out</button>
+
+
+        </div>
+      </section>
+    </aside>
+    <!-- End sidebar -->
+
+    <!-- navbar -->
+    <div class=" w-full h-20 fixed flex items-center justify-between">
+
+      <div class="flex items-center justify-between pt-8 pl-4 ml-64 gap-3 text-white">
+
+        <div class="flex bg-gray-100 items-center justify-center w-full rounded-full shadow-lg">
+          <input class="text-black rounded-full px-4 py-2" placeholder="Search For Dinner" type="">
+
+          <div class="p-2">
+            <button class="flex items-center justify-center bg-red-500 p-2 rounded-full w-8 h-8"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+
+        <div class="flex bg-gray-100 items-center justify-center w-full rounded-full shadow-lg">
+          <input class="text-black rounded-full px-4 py-2" placeholder="Search For Restaurant" type="">
+
+          <div class="p-2">
+            <button class="flex items-center justify-center bg-green-500 p-2 rounded-full w-8 h-8"><i
+                class="fa-solid fa-home"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center  mr-16 gap-4 space-x-4">
+
+        <div class="shadow-lg h-10 flex items-center justify-center px-4 py-2 rounded-xl">
+          <p>Hello Thanthita</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-bell"></i>
+        </div>
+
+        <div>
+          <img class="w-8 h-8 rounded-full" src="img/336265442_756338909343792_6857489562699698271_n.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  <!-- End navbar -->
+
+  <!-- content -->
+  <div class="flex-1 mt-21 ml-10">
+    <div class="flex justify-between items-center">
+      <p class="text-3xl font-bold ">What would you eat today? <i class="fa-solid fa-utensils ml-2 text-3xl text-gray-700"></i></p>
+
+      <div class="flex space-x-4">
+        <button class="bg-orange-400 px-6 py-2  rounded-full text-white hover:bg-white hover:text-black shadow-lg transition-all duration-300 delay-300">
+          <i class="fa-solid fa-cookie-bite mr-1"></i>Snack</button>
+        <button class="bg-amber-800 px-6 py-2  rounded-full text-white hover:bg-white hover:text-black shadow-lg transition-all duration-300 delay-300">
+          <i class="fa-solid fa-mug-hot mr-1"></i> Drink </button>
+        <button class="bg-black px-6 py-2  rounded-full text-white hover:bg-white hover:text-black shadow-lg transition-all duration-300 delay-300">
+          <i class="fa-solid fa-bowl-food mr-2"></i> Foods </button>
+        <button class="bg-gray-500 px-6 py-2  rounded-full text-white hover:bg-white hover:text-black shadow-lg transition-all duration-300 delay-300">
+          All menu 
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-6 mt-2 gap-10">
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2017/08/06/06/42/pizza-2589569_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Pizza</h3>
+            <p>5 Item</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2022/05/20/08/55/pasta-7209002_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Salad Mix</h3>
+            <p>5 Item</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300">
+        <img class="w-full h-32 object-cover"
+         src="https://media.istockphoto.com/id/1771258232/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/beef-burger-with-french-fries.jpg?s=2048x2048&w=is&k=20&c=P4KTQxvwPXpWxA2zd-t9NrhcS5d4EQGRZ0AmWOJDLqw=" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Hanberger</h3>
+            <p>5 Item</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2016/04/25/01/58/french-fries-1351067_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Fren Frie</h3>
+            <p>5 Item</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2015/09/05/20/31/soda-925129_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Drink</h3>
+            <p>5 Item</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2023/05/05/11/07/sweet-7972193_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Snack</h3>
+            <p>5 Item</p>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+
+    <h2 class="text-xl font-bold mt-4">Top Meaks This Weak
+      <i class="fa-solid fa-star text-yellow-500"></i>
+      <i class="fa-solid fa-star text-yellow-500"></i>
+      <i class="fa-solid fa-star text-yellow-500"></i>
+      <i class="fa-solid fa-star text-yellow-500"></i>
+    </h2>
+
+    <h3>
+      Recomemeded !
+    </h3>
+
+    
+    <div class="grid grid-cols-6 mt-4 gap-10">
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300 mt-3">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2017/09/17/22/01/pretzels-2759994_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Snack 4 Star</h3>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300 mt-3">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2015/05/31/13/59/salad-791891_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Soanish Salad</h3>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300 mt-3">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2015/09/05/20/31/soda-925129_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Drink 4 Star</h3>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300 mt-3">
+        <img class="w-full h-32 object-cover"
+         src="https://media.istockphoto.com/id/1771258232/th/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2/beef-burger-with-french-fries.jpg?s=2048x2048&w=is&k=20&c=P4KTQxvwPXpWxA2zd-t9NrhcS5d4EQGRZ0AmWOJDLqw=" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold ">Hamberger 4 Star</h3>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300 mt-3">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2017/08/06/06/42/pizza-2589569_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Pizza 3 Star</h3>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col bg-zinc-800 h-58 w-44 rounded-lg  overflow-hidden shadow-lg 
+                  hover:scale-105 transition-all duration-700 hover:border-4 hover:border-orange-300 mt-3">
+        <img class="w-full h-32 object-cover"
+         src="https://cdn.pixabay.com/photo/2017/09/17/22/01/pretzels-2759994_1280.jpg" alt="">
+        <div class="flex items-center justify-between p-4">
+          <div class="text-white">
+            <h3 class="font-semibold">Frenfrie 2 Star</h3>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+            <i class="fa-solid fa-star text-gray-500"></i>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-circle-plus text-orange-500 text-xl cursor-pointer hover:text-white"></i>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Favoritec section -->
+    <div class="flex items-center text-2xl py-2 w-80 mt-2">
+      <h2 class="text-xl font-bold">Your Favoritec Restaurant</h2>
+      <i class="fa-solid fa-ship ml-2"></i>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4 mt-4">
+
+      <div class="flex bg-blue-200 rounded-lg p-2 shadow-2xl">
+        <img class="w-60 h-35 object-cover rounded-lg" 
+        src="https://cdn.pixabay.com/photo/2023/08/18/10/00/sea-8198149_1280.jpg" alt="">
+
+        <div class="flex items-start ml-4 justify-between">
+          <div class="">
+            <h3 class="font-semibold">Sea Kobdeny</h3>
+            <p class="text-sm mt-2">254/4 August Lane, CA 909210</p>
+            <p class="text-sm mt-2">754/11 United State</p>
+            <p class="text-sm mt-3">Total Like</p>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+            <i class="fa-solid fa-star text-yellow-500"></i>
+          </div>
+
+          <div class="flex ml-10 h-full items-center">
+            <i class="fa-solid fa-map-location-dot text-3xl"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="flex bg-white rounded-lg p-2 shadow-2xl">
+        <img class="w-60 h-35 object-cover rounded-lg" 
+        src="https://cdn.pixabay.com/photo/2018/09/16/12/29/sea-bridge-3681412_1280.jpg" alt="">
+
+        <div class="flex items-start ml-4 justify-between">
+          <div class="">
+            <h3 class="font-semibold">Sea Kobdeny</h3>
+            <p class="text-sm mt-2">254/4 August Lane, CA 909210</p>
+            <p class="text-sm mt-2">754/11 United State</p>
+            <p class="text-sm mt-3">Total Like</p>
+            <i class="fa-solid fa-star text-yellow-200"></i>
+            <i class="fa-solid fa-star text-yellow-200"></i>
+            <i class="fa-solid fa-star text-yellow-200"></i>
+            <i class="fa-solid fa-star text-yellow-200"></i>
+            <i class="fa-solid fa-star text-yellow-200"></i>
+          </div>
+
+          <div class="flex ml-10 h-full items-center">
+            <i class="fa-solid fa-map-location-dot text-3xl"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- End content -->
+
+  <!-- order -->
+  <div class="bg-zinc-800 fixed right-4 p-7 top-20 bottom-0 text-white w-1/6 rounded-lg mb-2">
+    <div class="flex items-center justify-between ">
+      <div class="text-2xl font-bold">
+        <h2>My Oder</h2>
+      </div>
+
+      <div>
+        <p class="text-orange-500 bg-gray-500 p-2 rounded-lg">Edit</p>
+      </div>
+    </div>
+
+    <div class="mt-4 text-sm text-gray-300">
+      <p><i class="fa-regular fa-clock mr-2 bg-white text-orange-500 p-2 rounded-full"></i>09:40 Pm</p>
+    </div>
+
+    <div class="mt-4 text-sm text-gray-300">
+      <p><i class="fa-solid fa-location-dot mr-2 bg-white text-orange-500 p-2 rounded-full"></i></i>2817 Sumutsakorn, city, 74000</p>
+    </div>
+
+     <div class="mt-4 text-sm text-gray-300">
+      <p><i class="fa-regular fa-comments bg-white text-orange-500 p-2 rounded-full"></i></i>Oders must stay warm</p>
+    </div>
+
+    <div class="mt-6">
+      <div class="flex items-center justify-between p-2 bg-white text-black rounded-lg text-sm px-3 py-2">
+        <img class="w-18 h-16 object-cover rounded-lg" 
+        src="https://cdn.pixabay.com/photo/2017/08/06/06/42/pizza-2589569_1280.jpg" alt="">
+
+        <div class="px-4">
+          <p>Pizza</p>
+          <p class="text-gray-400">350 G</p>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <button class="text-green-500 px-1 hover:bg-gray-200 hover:rounded-full">-</button>
+          <input value="1" 
+           class="w-4 text-center"
+           type="text">
+          <button class="text-green-500 px-1 hover:bg-gray-200 hover:rounded-full">+</button>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <div class="flex items-center justify-between p-2 bg-white text-black rounded-lg text-sm px-3 py-2">
+          <img class="w-18 h-16 object-cover rounded-lg" 
+          src="https://cdn.pixabay.com/photo/2017/09/17/22/01/pretzels-2759994_1280.jpg" alt="">
+  
+          <div class="px-4">
+            <p>Snack</p>
+            <p class="text-gray-400">600 G</p>
+          </div>
+  
+          <div class="flex items-center gap-5">
+            <button class="text-green-500 px-1 hover:bg-gray-200 hover:rounded-full">-</button>
+            <input value="1" 
+             class="w-4 text-center"
+             type="text">
+            <button class="text-green-500 px-1 hover:bg-gray-200 hover:rounded-full">+</button>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <div class="flex items-center justify-between p-2 bg-white text-black rounded-lg text-sm px-3 py-2">
+            <img class="w-18 h-16 object-cover rounded-lg" 
+            src="https://cdn.pixabay.com/photo/2015/09/05/20/31/soda-925129_1280.jpg" alt="">
+    
+            <div class="px-4">
+              <p>Drink</p>
+              <p class="text-gray-400">1500 G</p>
+            </div>
+    
+            <div class="flex items-center gap-5">
+              <button class="text-green-500 px-1 hover:bg-gray-200 hover:rounded-full">-</button>
+              <input value="3" 
+               class="w-4 text-center"
+               type="text">
+              <button class="text-green-500 px-1 hover:bg-gray-200 hover:rounded-full">+</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="mt-4 bg-gradient-to-r from-orange-400 via-orange-600 to bg-orange-800 p-4 rounded-lg flex flex-col gap-2">
+      <div class="flex gap-2 items-center justify-between">
+        <i class="fa-brands fa-cc-visa text-2xl"></i>
+        <p>**** **** 4214</p>
+        <p>Expire</p>
+        <p>CVV</p>
+      </div>
+
+      <div class="flex justify-between text-sm p-2">
+        <p>Balance</p>
+        <p class="ml-20">17/07</p>
+        <p>186</p>
+      </div>
+
+      <div class="flex justify-between text-sm p-2">
+        <p>Availble funds</p>
+        <p>$ 18,42,512</p>
+      </div>
+    </div>
+
+    <div class="w-full flex items-center justify-center mt-10 ">
+      <button class="bg-gradient-to-r from-green-500 via-green-600 to-green-800 px-6 py-1 rounded-full ">Ckeck Out</button>
+    </div>
+  </div>
+
+ 
+  <!-- End order -->
+  </div>
+</body>
+
+</html>
